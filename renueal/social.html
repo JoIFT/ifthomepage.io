@@ -480,8 +480,8 @@
         }
     </style>
 
-    
-    <!-- <style>
+    <!--
+    <style>
         @media screen and (max-width: 767px) {
             /* 모바일 */ 
             #desktop {
@@ -514,7 +514,8 @@
                 display: none;
             }
         }
-    </style> -->
+    </style>
+    -->
     
     <style>
         #con1 {
@@ -732,7 +733,7 @@
         .testLst li {
             float: left;
             width: 50%;
-            height: auto;
+            height: 25vw;
         }
         .testTit {
             color: #fff;
@@ -741,6 +742,16 @@
             font-family: 'Gothic A1', sans-serif;
             text-shadow: 1px 1px 10px #fff;
             padding: 5%;
+        }
+        .testTit2 {
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.2vmax;
+            font-family: 'Gothic A1', sans-serif;
+            text-shadow: 1px 1px 10px #fff;
+            padding: 5%;
+            padding-top: 0;
+            
         }
         .testTxt {
             display: block;
@@ -751,6 +762,7 @@
             font-size: 1vmax;
             font-family: 'Gothic A1', sans-serif;
             padding-bottom: 20%;
+            line-height: 2em;
         }
         .itemBg1 {
             background-image: url("./images/social/con2BgImg1.png");
@@ -801,7 +813,6 @@
         .faBox {
             width: 500%;
             height: auto;
-            margin-top: 15%;
         }
         .faBox:after {
             content: " ";
@@ -838,13 +849,18 @@
         }
         .c2_4Txt strong {
             display: block;
-            font-size: 7vmax;
-            color: #ed1b71;
-            margin: 5% 0%;
+            font-size: 12vmax;
+            color: #fff;
+            margin: 1.5% 0%;
             margin-bottom: 1.5%;
             text-shadow: 1px 1px 30px #fff;
         }
-        
+        .poster {
+            display: block;
+            width: 60%;
+            height: auto;
+            margin: 0 auto;
+        }
         .inveLst {
             width: 100%;
             height: auto;
@@ -908,7 +924,7 @@
             display: block;
             width: auto;
             height: auto;
-            margin: 0 auto;
+            margin: 5% auto;
             background: #fff;
             color: #3f3f3f;
             font-weight: bold;
@@ -916,6 +932,13 @@
             font-family: 'Gothic A1', sans-serif;
             text-align: center;
             padding: 1.5%;
+            transform: rotateX(0deg);
+            transition: 0.5s;
+        }
+        .click:hover {
+            background-color: #3f3f3f;
+            color: #fff;
+            transform: rotateX(360deg);
         }
         .faTxt {
             display: block;
@@ -941,6 +964,25 @@
             display: block;
             width: 100%;
             height: auto;
+        }
+        .wonBtn {
+            display: block;
+            text-align: center;
+            width: 40%;
+            height: auto;
+            margin: 0 auto;
+            padding: 1.5%;
+            background-color: #3f3f3f;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid #3fd3ff;
+            transform: rotateX(0deg);
+            transition: 0.5s;
+        }
+        .wonBtn:hover {
+            color: #3f3f3f;
+            background-color: #fff;
+            transform: rotateX(360deg);
         }
     </style>
     
@@ -1037,6 +1079,7 @@
             top: 60%;
             left: 5%;
             width: 90%;
+            line-height: 1.5em;
         }
         .Mcon1In {
             width: 80%;
@@ -1197,6 +1240,16 @@
             text-shadow: 1px 1px 10px #fff;
             padding: 5%;
         }
+        .MtestTit2 {
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.2vmax;
+            font-family: 'Gothic A1', sans-serif;
+            text-shadow: 1px 1px 10px #fff;
+            padding: 5%;
+            padding-top: 0;
+            
+        }
         .MtestTxt {
             display: block;
             color: #fff;
@@ -1277,7 +1330,7 @@
         .Mc2_4Tit {
             color: #fff;
             font-weight: bold;
-            font-size: 4vmax;
+            font-size: 3vmax;
             font-family: 'Gothic A1', sans-serif;
             text-shadow: 1px 1px 10px #fff;
             padding: 5%;
@@ -1295,7 +1348,7 @@
             display: block;
             font-size: 7vmax;
             color: #ed1b71;
-            margin: 5% 0%;
+            margin: 1.5% 0%;
             margin-bottom: 1.5%;
             text-shadow: 1px 1px 30px #fff;
         }
@@ -1494,19 +1547,19 @@
                            <img src="./images/social/vs1.png" alt="">
                            <h2 class="vsTit1">로봇코딩컵</h2>
                            <span class="vsTxt1">ROCOCUP</span>
-                           <span class="vsTxt2">대상을 전국으로 또한, 유치, 초, 중, 고 및 일반인을 대상으로 4대회, 11개 종목, 24개 부문으로 구성된 로봇코딩컵대회이다.</span>
+                           <span class="vsTxt2">기존의 틀과 방식에서 벗어나 우리의 자녀들이 꿈꾸고 즐길 수 있는 대회!<br>승자와 패자로 나뉘는 경쟁을 뛰어 넘어 학생 스스로 주도하고 중심이 되는!<br>매년 새로운 도전과 배움의 터전이 됩니다.</span>
                        </li>
                        <li>
                            <img src="./images/social/vs2.png" alt="">
                            <h2 class="vsTit1">코딩올림피아드</h2>
                            <span class="vsTxt1">Korea Olympiad Coding</span>
-                           <span class="vsTxt2">초등,중등,고등에 걸쳐 폭넓은 연령대의 학생들이블록프로그램부터 텍스트 프로그램까지 단계를 밟아가며코딩 교육의 올바른 방향을 확인하고 컴퓨팅적 사고능력 향상에 도움이 되도록 진행하며, 2대회 6개 부문으로 나누어 있다.</span>
+                           <span class="vsTxt2">단순히 코딩 기술을 평가하는 대회가 아닌<br>창의적인 생각과 컴퓨팅 사고력을 발휘하도록 구성!<br>미래 산업의 주역이 될 코딩인재를 발굴하는데 목적을 가진다.</span>
                        </li>
                        <li>
                            <img src="./images/social/vs3.png" alt="">
-                           <h2 class="vsTit1">로봇융합페스티벌</h2>
+                           <h2 class="vsTit1">페밀리아로봇창작경진대회</h2>
                            <span class="vsTxt1">Robot fusion festival</span>
-                           <span class="vsTxt2">창의적인 생각의 발달 시기인 유아 5세부터 7세를 위한 로봇과학 융합 페스티벌 대회 이다.</span>
+                           <span class="vsTxt2">창의적인 생각을 로봇이라는 주제를 통하여 표현! 가족과 함께 소통하며 로봇과 코딩을 배우고<br>창의적인 생각을 로봇으로 표현하고 발표! 유아 5세부터 7세를 위한 로봇과학 대회를 통하여<br>자연스럽게 기계공학 및 로봇·코딩에 대한 흥미를 갖게 한다.</span>
                        </li>
                        <li>
                            <img src="./images/social/vs4.png" alt="">
@@ -1525,7 +1578,7 @@
                            <a href="" class="coding">코딩올림피아드</a>
                        </li>
                        <li>
-                           <a href="" class="familly">로봇융합페스티벌</a>
+                           <a href="" class="familly">페밀리아로봇창작경진대회</a>
                        </li>
                        <li>
                            <a href="" class="inve">후원</a>
@@ -1541,6 +1594,7 @@
            <div class="con2In">
                <div class="con2Box">
                    <ul class="con2Box_Box">
+                      
                        <li class="con2BoxLst ro">
                            <ul class="con2Box1_Box">
                                <li class="con2Box1_BoxLst">
@@ -1557,7 +1611,7 @@
                                </li>
                                <li class="con2Box1_BoxLst">
                                    <h2 class="con2Box1_Tit">26</h2>
-                                   <span class="con2Box1_Txt1">3개 대회</span>
+                                   <span class="con2Box1_Txt1">4개 대회</span>
                                    <span class="con2Box1_Txt2">12개 종목</span>
                                    <span class="con2Box1_Txt3">26개 부문</span>
                                </li>
@@ -1588,14 +1642,49 @@
                                </li>
                            </ul>
                            
-                           <h2 class="c2_4Tit">2019 로코컵 대회</h2>
-                           <a href="https://www.kref.kr/blank-15" class="click" target="_blank">2019 로코컵 대회 참가신청하기</a>
+                           <h2 class="c2_4Tit">2019 로봇코딩컵 대회</h2>
+                           <img src="./images/social/rococupPoster.png" alt="" class="poster">
+                           <a href="https://www.kref.kr/blank-15" class="click" target="_blank">2019 로봇코딩컵 대회 참가신청하기</a>
                        </li>
                        
-                       <li class="con2BoxLst olym">
-                           <ul class="olym1Box">
-                               <li class="imgBoxLst"><img src="./images/social/epl1.png" alt=""></li>
-                               <li class="imgBoxLst"><img src="./images/social/cln1.png" alt=""></li>
+                       <li class="con2BoxLst ro olym">
+                           <ul class="con2Box1_Box">
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">2018</h2>
+                                   <span class="con2Box1_Txt1">제1회 국립중앙과학관</span>
+                                   <span class="con2Box1_Txt2">제2회 대전컨벤션센터</span>
+                               </li>
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">654</h2>
+                                   <span class="con2Box1_Txt1">참가인원</span>
+                                   <span class="con2Box1_Txt2">초등 455명</span>
+                                   <span class="con2Box1_Txt3">중·고등 199명</span>
+                               </li>
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">4</h2>
+                                   <span class="con2Box1_Txt1">EPL&amp;C언어</span>
+                                   <span class="con2Box1_Txt2">2개 종목</span>
+                                   <span class="con2Box1_Txt3">4개 부문</span>
+                               </li>
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">300</h2>
+                                   <span class="con2Box1_Txt1">각 부문별</span>
+                                   <span class="con2Box1_Txt2">장학금 수여</span>
+                                   <span class="con2Box1_Txt3">부상 수여</span>
+                               </li>
+                           </ul>
+                           
+                           <ul class="testLst">
+                               <li class="itemBg1">
+                                   <h2 class="testTit">EPL 코딩</h2>
+                                   <h2 class="testTit2">EPL MAKE</h2>
+                                   <span class="testTxt">주어지는 주제에 맞는 코딩을 통하여 소프트웨어를 자유롭게 개발하는 종목이다. 주 미션 문제를 통해 자신만의 문제해결 방법을 모색하고 표현해 봄으로써, 다른 참가자와의 순위경쟁을 떠나 참가자들이 공통된 문제를 가지고 어떻게 생각하는지를 볼 수 있다.</span>
+                               </li>
+                               <li class="itemBg2">
+                                   <h2 class="testTit">C언어 코딩</h2>
+                                   <h2 class="testTit2">Know Algorithm</h2>
+                                   <span class="testTxt">필기문제를 통해 단순한 이론뿐만 아니라, 논리적 사고력사고력과 문제해결에 대한 기본지식을 갖출 수 있도록 하며, 실기문제를 통해 자신만의 문제해결방법을 모색하고 표현해 봄 으로써 다른 참가자와의 순위경쟁을 떠나 참가자들이 공통된 문제를 가지고 스스로 자신의 실력을 평가하고 점검하는 시간을 갖도록 하였다.</span>
+                               </li>
                            </ul>
                            <h2 class="c2_4Tit">코딩올림피아드 대회사진</h2>
                            <ul class="olym2Box">
@@ -1616,6 +1705,42 @@
                        </li>
                        
                        <li class="con2BoxLst fam" style="overflow: hidden;">
+                          <ul class="con2Box1_Box">
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">7</h2>
+                                   <span class="con2Box1_Txt1">제7회 로봇융합페스티벌</span>
+                                   <span class="con2Box1_Txt2">페밀리아로봇창작경진대회 후원</span>
+                                   <span class="con2Box1_Txt3">대전컨벤션센터</span>
+                               </li>
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">2,637</h2>
+                                   <span class="con2Box1_Txt1">1,671팀</span>
+                                   <span class="con2Box1_Txt2">2,637명 참가</span>
+                                   <span class="con2Box1_Txt3">관람객 15,000명</span>
+                               </li>
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">100</h2>
+                                   <span class="con2Box1_Txt1">FRCCF 50팀</span>
+                                   <span class="con2Box1_Txt2">100명</span>
+                               </li>
+                               <li class="con2Box1_BoxLst">
+                                   <h2 class="con2Box1_Tit">373</h2>
+                                   <span class="con2Box1_Txt1">시상 373팀(명)</span>
+                                   <span class="con2Box1_Txt2">참여기관 8</span>
+                                   <span class="con2Box1_Txt3">후원기관 3</span>
+                               </li>
+                           </ul>
+                           
+                           <ul class="testLst" style="margin: 0;">
+                               <li style="height: 2vw"> 
+                                   
+                               </li>
+                               <li style="height: 2vw">
+                                   
+                               </li>
+                           </ul>
+                           
+                           <h2 class="c2_4Tit">페밀리아로봇<br>창작경진대회 사진</h2>
                            <ul class="faBox">
                                <li><img src="./images/social/3_vs1.png" alt=""></li>
                                <li><img src="./images/social/3_vs2.png" alt=""></li>
@@ -1629,7 +1754,7 @@
                        
                        <li class="con2BoxLst">
                            <h2 class="c2_4Tit">후원 안내</h2>
-                           <span class="c2_4Txt">본 협회는 비영리 민간기관으로 모든 활동을 자체(후원) 예산으로 진행하고 있습니다.<br>인재 발굴과 양성을 위해서 많은 후원이 필요합니다. 적극적인 동참으로 4차 산업혁명 시대의 중심은 <br><strong>『인재』</strong><br>라는 모토로 청소년들의 미래를 밝게 비추길 원합니다.</span>
+                           <span class="c2_4Txt">본 협회는 비영리 민간기관으로 모든 활동을 자체(후원) 예산으로 진행하고 있습니다.<br>인재 발굴과 양성을 위해서 많은 후원이 필요합니다.<br>적극적인 동참으로 4차 산업혁명 시대의 중심은 <br><strong>『인재』</strong><br>라는 모토로 청소년들의 미래를 밝게 비추길 원합니다.</span>
                            
                            <ul class="inveLst">
                                <li>
@@ -1655,8 +1780,8 @@
                                    <h2 class="inveLstTit1">개인 플러스 회원</h2>
                                    <h2 class="inveLstTit2">특전</h2>
                                    <span class="inveLstTxt1">1. 로봇코딩컵대회 복수 종목 참가</span>
-                                   <span class="inveLstTxt1">2. 강연 · 세미나 참석 무료 (연 2회)</span>
-                                   <span class="inveLstTxt1">3. 진로탐색 및 직업 체험 (연 2회)</span>
+                                   <span class="inveLstTxt1">2. 강연 · 세미나 참석 무료</span>
+                                   <span class="inveLstTxt1">3. 진로탐색 및 직업 체험</span>
                                    <span class="inveLstTxt1">4. 정기 발행 웹진 구독</span>
                                    <span class="inveLstTxt1">5. 칼럼 구독</span>
                                    <span class="inveLstTxt1">6. KREF 소식 메일링</span>
@@ -1692,6 +1817,9 @@
                            
                            <h2 class="c2_4Tit">후원 및 회비 입금 계좌</h2>
                            <span class="bank">기업은행 : 940-025061-01-011<br>예 금 주 : 한국로봇교육연합회</span>
+                           
+                           <br>
+                           <a href="mailto:rococup@naver.com?subject=연회원 가입 신청서&body= 학생이름 : %0D%0A 학교 / 학년 / 반 : %0D%0A 핸드폰 번호(보호자) : %0D%0A 이메일 : %0D%0A 주소 : %0D%0A 회원선택 : %0D%0A*본 항목들은 필수사항으로 적어주셔야 하며, %0D%0A '개인연회원'과'개인회원'중에 선택하여 기록해 주시기 바랍니다. %0D%0A개인연회원은 학생이름으로 5만원을 입금하시면 됩니다. %0D%0A 본 정보수집은 이용에 대하여 거부하실 수 있으나, 거부하시는 회원신청이 제한됩니다. 회원종료후 1년 보유%0D%0A*동의하시면 O 동의하지않으시면 X 를 작성해 주세요 (     )" class="wonBtn">회원가입 신청서</a>
                        </li>
                    </ul>
                </div>
@@ -1713,7 +1841,7 @@
                                 <a href="call:070-4185-7272" class="call">전화 : 070-4185-7272</a>
                             </li>
                             <li class="ftLst">
-                                <a href="mailTo:rococup@naver.com" class="mail">이메일 : rococup@naver.com</a>
+                                <a href="mailTo:rococup@naver.com" class="mail">이메일 : ift-edutech@naver.com</a>
                             </li>
                             <li class="ftLst">
                                     <ul class="ftSnsBox">
@@ -1822,25 +1950,25 @@
                            <img src="./images/social/vs1.png" alt="">
                            <h2 class="MvsTit1">로봇코딩컵</h2>
                            <span class="MvsTxt1">ROCOCUP</span>
-                           <span class="MvsTxt2">대상을 전국으로 또한, 유치, 초, 중, 고 및 일반인을 대상으로 4대회, 11개 종목, 24개 부문으로 구성된 로봇코딩컵대회이다.</span>
+                           <span class="MvsTxt2">기존의 틀과 방식에서 벗어나 우리의 자녀들이 꿈꾸고 즐길 수 있는 대회! 승자와 패자로 나뉘는 경쟁을 뛰어 넘어 학생 스스로 주도하고 중심이 되는! 매년 새로운 도전과 배움의 터전이 됩니다.</span>
                        </li>
                        <li>
                            <img src="./images/social/vs2.png" alt="">
                            <h2 class="MvsTit1">코딩올림피아드</h2>
                            <span class="MvsTxt1">Korea Olympiad Coding</span>
-                           <span class="MvsTxt2">초등,중등,고등에 걸쳐 폭넓은 연령대의 학생들이블록프로그램부터 텍스트 프로그램까지 단계를 밟아가며코딩 교육의 올바른 방향을 확인하고 컴퓨팅적 사고능력 향상에 도움이 되도록 진행하며, 2대회 6개 부문으로 나누어 있다.</span>
+                           <span class="MvsTxt2">단순히 코딩 기술을 평가하는 대회가 아닌	창의적인 생각과 컴퓨팅 사고력을 발휘하도록 구성!	미래 산업의 주역이 될 코딩인재를 발굴하는데 목적을 가진다.</span>
                        </li>
                        <li>
                            <img src="./images/social/vs3.png" alt="">
-                           <h2 class="MvsTit1">로봇융합페스티벌</h2>
+                           <h2 class="MvsTit1">페밀리아로봇창작경진대회</h2>
                            <span class="MvsTxt1">Robot fusion festival</span>
-                           <span class="MvsTxt2">창의적인 생각의 발달 시기인 유아 5세부터 7세를 위한 로봇과학 융합 페스티벌 대회 이다.</span>
+                           <span class="MvsTxt2">창의적인 생각을 로봇이라는 주제를 통하여 표현! 가족과 함께 소통하며 로봇과 코딩을 배우고 창의적인 생각을 로봇으로 표현하고 발표! 유아 5세부터 7세를 위한 로봇과학 대회를 통하여 자연스럽게 기계공학 및 로봇·코딩에 대한 흥미를 갖게 한다.</span>
                        </li>
                        <li>
                            <img src="./images/social/vs4.png" alt="">
                            <h2 class="MvsTit1">후원</h2>
                            <span class="MvsTxt1">support</span>
-                           <span class="MMvsTxt2">IFT는 사회공헌파트에 대한 후원을 받고 있습니다.<br>여러분의 후원이 큰 힘이 되어, 더욱 앞서가는 모습을 보여드리겠습니다.</span>
+                           <span class="MvsTxt2">IFT는 사회공헌파트에 대한 후원을 받고 있습니다.<br>여러분의 후원이 큰 힘이 되어, 더욱 앞서가는 모습을 보여드리겠습니다.</span>
                        </li>
                    </ul>
                </figure>
@@ -1853,7 +1981,7 @@
                            <a href="" class="Mcoding">코딩올림피아드</a>
                        </li>
                        <li>
-                           <a href="" class="Mfamilly">로봇융합페스티벌</a>
+                           <a href="" class="Mfamilly">페밀리아로봇창작</a>
                        </li>
                        <li>
                            <a href="" class="Minve">후원</a>
@@ -1869,6 +1997,7 @@
            <div class="Mcon2In">
                <div class="Mcon2Box">
                    <ul class="Mcon2Box_Box">
+                      
                        <li class="Mcon2BoxLst ro">
                            <ul class="Mcon2Box1_Box">
                                <li class="Mcon2Box1_BoxLst">
@@ -1885,7 +2014,7 @@
                                </li>
                                <li class="Mcon2Box1_BoxLst">
                                    <h2 class="Mcon2Box1_Tit">26</h2>
-                                   <span class="Mcon2Box1_Txt1">3개 대회</span>
+                                   <span class="Mcon2Box1_Txt1">4개 대회</span>
                                    <span class="Mcon2Box1_Txt2">12개 종목</span>
                                    <span class="Mcon2Box1_Txt3">26개 부문</span>
                                </li>
@@ -1916,15 +2045,53 @@
                                </li>
                            </ul>
                            
-                           <h2 class="Mc2_4Tit">2019 로코컵 대회</h2>
-                           <a href="https://www.kref.kr/blank-15" class="Mclick" target="_blank">2019 로코컵 대회 참가신청하기</a>
+                           <h2 class="Mc2_4Tit">2019 로봇코딩컵 대회</h2>
+                           <img src="./images/social/rococupPoster.png" alt="" class="poster">
+                           <a href="https://www.kref.kr/blank-15" class="Mclick" target="_blank">2019 로봇코딩컵 대회 참가신청하기</a>
                        </li>
                        
-                       <li class="Mcon2BoxLst Molym">
-                           <ul class="Molym1Box">
-                               <li class="MimgBoxLst"><img src="./images/social/epl1.png" alt=""></li>
-                               <li class="MimgBoxLst"><img src="./images/social/cln1.png" alt=""></li>
+                       <li class="Mcon2BoxLst ro olym">
+                           <ul class="Mcon2Box1_Box">
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">2018</h2>
+                                   <span class="Mcon2Box1_Txt1">제1회 국립중앙과학관</span>
+                                   <span class="Mcon2Box1_Txt2">제2회 대전컨벤션센터</span>
+                                   <span class="Mcon2Box1_Txt3">한밭체육관</span>
+                               </li>
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">654</h2>
+                                   <span class="Mcon2Box1_Txt1">참가인원</span>
+                                   <span class="Mcon2Box1_Txt2">초등 455명</span>
+                                   <span class="Mcon2Box1_Txt3">중·고등 199명</span>
+                               </li>
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">4</h2>
+                                   <span class="Mcon2Box1_Txt1">EPL&amp;언어</span>
+                                   <span class="Mcon2Box1_Txt2">2개 종목</span>
+                                   <span class="Mcon2Box1_Txt3">4개 부문</span>
+                               </li>
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">300</h2>
+                                   <span class="Mcon2Box1_Txt1">각 부문별</span>
+                                   <span class="Mcon2Box1_Txt2">장학금 수여</span>
+                                   <span class="Mcon2Box1_Txt3">부상 수여</span>
+                               </li>
                            </ul>
+                           
+                           <ul class="MtestLst">
+                               <li class="MitemBg1">
+                                   <h2 class="MtestTit">EPL 코딩</h2>
+                                   <h2 class="MtestTit2">EPL MAKE</h2>
+                                   <span class="MtestTxt">주어지는 주제에 맞는 코딩을 통하여 소프트웨어를 자유롭게 개발하는 종목이다. 주 미션 문제를 통해 자신만의 문제해결 방법을 모색하고 표현해 봄으로써, 다른 참가자와의 순위경쟁을 떠나 참가자들이 공통된 문제를 가지고 어떻게 생각하는지를 볼 수 있다.</span>
+                               </li>
+                               <li class="MitemBg2">
+                                   <h2 class="MtestTit">C언어 코딩</h2>
+                                   <h2 class="MtestTit2">Know Algorithm</h2>
+                                   <span class="MtestTxt">필기문제를 통해 단순한 이론뿐만 아니라, 논리적 사고력사고력과 문제해결에 대한 기본지식을 갖출 수 있도록 하며, 실기문제를 통해 자신만의 문제해결방법을 모색하고 표현해 봄 으로써 다른 참가자와의 순위경쟁을 떠나 참가자들이 공통된 문제를 가지고 스스로 자신의 실력을 평가하고 점검하는 시간을 갖도록 하였다.</span>
+                               </li>
+                           </ul>
+
+                       
                            <h2 class="Mc2_4Tit">코딩올림피아드<br>대회사진</h2>
                            <ul class="Molym2Box">
                                <li>
@@ -1940,10 +2107,44 @@
                                    <img src="./images/social/2_vs4.png" alt="">
                                </li>
                            </ul>
+                        </li>
+                        
+                         <li class="Mcon2BoxLst ro Mfam" style="overflow: hidden;">
+                           <ul class="Mcon2Box1_Box">
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">7</h2>
+                                   <span class="Mcon2Box1_Txt1">제7회 로봇융합페스티벌</span>
+                                   <span class="Mcon2Box1_Txt2">페밀리아 로봇창작경진대회 후원</span>
+                                   <span class="Mcon2Box1_Txt3">대전컨벤션센터</span>
+                               </li>
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">2,637</h2>
+                                   <span class="Mcon2Box1_Txt1">1,671팀</span>
+                                   <span class="Mcon2Box1_Txt2">2,637명 참가</span>
+                                   <span class="Mcon2Box1_Txt3">관람객 15,000명</span>
+                               </li>
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">100</h2>
+                                   <span class="Mcon2Box1_Txt1">페밀리아로봇창작경진대회 부문</span>
+                                   <span class="Mcon2Box1_Txt2">50팀</span>
+                                   <span class="Mcon2Box1_Txt3">100명</span>
+                               </li>
+                               <li class="Mcon2Box1_BoxLst">
+                                   <h2 class="Mcon2Box1_Tit">373</h2>
+                                   <span class="Mcon2Box1_Txt1">시상 373팀(명)</span>
+                                   <span class="Mcon2Box1_Txt2">참여기관 8</span>
+                                   <span class="Mcon2Box1_Txt3">후원기관 3</span>
+                               </li>
+                           </ul>
+                          <ul class="MtestLst">
+                               <li class="MitemBg1">
+                                   
+                               </li>
+                               <li class="MitemBg2">
+                                   
+                               </li>
+                           </ul>
 
-                       </li>
-                       
-                       <li class="Mcon2BoxLst Mfam" style="overflow: hidden;">
                            <ul class="MfaBox">
                                <li><img src="./images/social/3_vs1.png" alt=""></li>
                                <li><img src="./images/social/3_vs2.png" alt=""></li>
@@ -1957,7 +2158,7 @@
                        
                        <li class="Mcon2BoxLst">
                            <h2 class="Mc2_4Tit">후원 안내</h2>
-                           <span class="Mc2_4Txt">본 협회는 비영리 민간기관으로 모든 활동을 자체(후원) 예산으로 진행하고 있습니다.<br>인재 발굴과 양성을 위해서 많은 후원이 필요합니다. 적극적인 동참으로 4차 산업혁명 시대의 중심은 <br><strong>『인재』</strong><br>라는 모토로 청소년들의 미래를 밝게 비추길 원합니다.</span>
+                           <span class="Mc2_4Txt">본 협회는 비영리 민간기관으로 모든 활동을<br>자체(후원) 예산으로 진행하고 있습니다.<br>인재 발굴과 양성을 위해서 많은 후원이 필요합니다.<br>적극적인 동참으로 4차 산업혁명 시대의 중심은 <br><strong>『인재』</strong><br>라는 모토로 청소년들의 미래를 밝게 비추길 원합니다.</span>
                            
                            <ul class="MinveLst">
                                <li>
@@ -1977,8 +2178,8 @@
                                    <h2 class="MinveLstTit1">개인 플러스 회원</h2>
                                    <h2 class="MinveLstTit2">특전</h2>
                                    <span class="MinveLstTxt1">1. 로봇코딩컵대회 복수 종목 참가</span>
-                                   <span class="MinveLstTxt1">2. 강연 · 세미나 참석 무료 (연 2회)</span>
-                                   <span class="MinveLstTxt1">3. 진로탐색 및 직업 체험 (연 2회)</span>
+                                   <span class="MinveLstTxt1">2. 강연 · 세미나 참석 무료</span>
+                                   <span class="MinveLstTxt1">3. 진로탐색 및 직업 체험</span>
                                    <span class="MinveLstTxt1">4. 정기 발행 웹진 구독</span>
                                    <span class="MinveLstTxt1">5. 칼럼 구독</span>
                                    <span class="MinveLstTxt1">6. KREF 소식 메일링</span>

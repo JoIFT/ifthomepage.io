@@ -116,7 +116,7 @@
         }
         .vsTit2 {
             display: block;
-            font-size: 5vmax;
+            font-size: 4vmax;
             font-weight: bold;
             color: #fff;
             position: absolute;
@@ -849,6 +849,39 @@
             float: left;
             width: 25%;
             height: auto;
+            position: relative;
+        }
+        .MvsTit1 {
+            font-size: 1vmax;
+            font-weight: 200;
+            color: #fff;
+            position: absolute;
+            top: 33%;
+            left: 10%;
+            font-family: 'Do Hyeon', sans-serif;
+            display: block;
+        }
+        .MvsTit2 {
+            display: block;
+            font-size: 1.7vmax;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            top: 42%;
+            left: 10%;
+            text-shadow: 1px 2px 11px #3f3f3f;
+        }
+        .MvsTxt {
+            position: absolute;
+            font-size: 0.7vmax;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            top: 65%;
+            left: 10%;
+            font-family: 'Gothic A1', sans-serif;
+            letter-spacing: 0.4vw;
+            text-shadow: 1px 1px 15px #fff;
         }
         #Mvs ul li img {
             display: block;
@@ -931,14 +964,14 @@
         $(document).ready(function() {
             var wd = parseInt($(window).width());
             function rAni(){
-                $("#Mvs ul").not(":animated").animate({"margin-left" : "-100%"}, 1800, function(){
+                $("#Mvs ul").not(":animated").animate({"margin-left" : "-100%"}, 600, function(){
                     $("#Mvs ul li").eq(0).appendTo($("#Mvs ul"));
                     $("#Mvs ul").css("margin-left", "0px");
                 });
             };
             var intv = setInterval(function(){
                 rAni();
-            }, 2000);
+            }, 3000);
         });
     </script>
     
@@ -1308,9 +1341,529 @@
             margin-top: 5%;
         }
     </style>
-
     
-    <!-- <style>
+    
+    
+    
+    <!-- 테블릿 css -->
+    <!-- vs 포함 -->
+    <style>
+        #tablat {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        #Thd {
+            width: 100%;
+            height: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: 0.5s;
+        }
+        #Thd.on {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: 0.5s;
+        }
+        .ThdIn {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .Tlogo {
+            display: block;
+            width: 40%;
+            height: auto;
+            margin: 5% auto;
+        }
+        .Tlogo img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        #Tvs {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        #Tvs ul {
+            width: 400%;
+            height: auto;
+        }
+        #Tvs ul:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        #Tvs ul li {
+            float: left;
+            width: 25%;
+            height: auto;
+        }
+        #Tvs ul li img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .Tmenu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: -70%;
+            width: 70%;
+            height: auto;
+            background-color: #fff;
+            transition: 0.5s;
+            z-index: 9999;
+        }
+        .Tmenu.on {
+            left: 0;
+        }
+        .TmenuBtn {
+            display: block;
+            width: 10vw;
+            height: 10vw;
+            background-image: url("./images/MmenuBtn.png");
+            border: 0;
+            position: absolute;
+            right: -10vw;
+            top: 0;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 9999;
+        }
+        .TmenuBtn.on {
+            background-image: url("./images/MmenuX.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .Tmenu ul {
+            width: 100%;
+            height: auto;
+            z-index: 9999;
+        }
+        .Tmenu ul:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .Tmenu ul li {
+            float: left;
+            width: 75%;
+            height: auto;
+            margin: 5% 2.5%;
+            border-bottom: 1px solid #005871;
+            padding-bottom: 5%;
+            z-index: 9999;
+        }
+        .Tmenu ul li a {
+            display: inline-block;
+            color: #005871;
+            font-weight: bold;
+            font-size: 1.7vmax;
+            font-family: 'Text Me One', sans-serif;
+        }
+        .Tmenu ul li a.Mclick {
+            display: inline-block;
+            float: right;
+            padding-right: 5%;
+            padding-top: 1%;
+            font-weight: 100;
+            font-family: 'Amethysta', serif;
+            font-size: 1.7vmax;
+        }
+    </style>
+    
+    <!-- vs script -->
+    <script>
+        $(document).ready(function() {
+            var wd = parseInt($(window).width());
+            function rAni(){
+                $("#Tvs ul").not(":animated").animate({"margin-left" : "-100%"}, 1800, function(){
+                    $("#Tvs ul li").eq(0).appendTo($("#Tvs ul"));
+                    $("#Tvs ul").css("margin-left", "0px");
+                });
+            };
+            var intv = setInterval(function(){
+                rAni();
+            }, 2000);
+        });
+    </script>
+    
+    <!-- Tmenu -->
+    <script>
+        $(document).ready(function(){
+            $(".TmenuBtn").click(function(){
+                $("#Thd").toggleClass("on");
+                $(this).toggleClass("on");
+                $(".Tmenu").toggleClass("on");
+            });
+            
+        });
+    </script>
+    
+    <!-- Tcon2 -->
+    <style>
+        #Tcon2 {
+            width: 100%;
+            height: auto;
+            clear: both;
+        }
+        #Tcon2:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .Tcon2In {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .TconTit1 {
+            padding-top: 20%;
+            text-align: center;
+            font-size: 3vmax;
+            color: #fff;
+            font-family: 'Gothic A1', sans-serif;
+            text-shadow: 1px 1px 20px #fff;
+        }
+        .TconTit2 {
+            text-align: center;
+            font-size: 0.2vmax;
+            color: #fff;
+            font-family: 'Gothic A1', sans-serif;
+            padding: 2%;
+            box-sizing: border-box;
+        }
+        
+        .Tcon2In ul {
+            width: 100%;
+            height: auto;
+            margin-top: 7.5%;
+        }
+        .Tcon2In ul:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .Tcon2In ul li {
+            float: left;
+            width: 60%;
+            height: 30vw;
+            margin: 20%;
+            margin-bottom: 15%;
+        }
+        .Tcon2In ul li img {
+            display: block;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .Tcon2In ul li.Tcon2ItemPlus img, .Tcon2In ul li.Tcon2ItemNull img {
+            display: block;
+            width: 20%;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 50%;
+        }
+        .Tcon2ItemTit {
+            color: #50c3c8;
+            font-size: 1.3vmax;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+            text-align: center;
+            margin: 15% 0%;
+        }
+        .Tcon2ItemTxt {
+            display: block;
+            color: #fff;
+            font-size: 0.7vmax;
+            text-align: center;
+        }
+    </style>
+    
+    <!-- Tcon3 -->
+    <style>
+        #Tcon3 {
+            width: 100%;
+            height: auto;
+            transition: 0.5s;
+            clear: both;
+        }
+        #Tcon3:after {
+            display: block;
+            content: " ";
+            clear: both;
+        }
+        .Tcon3In {
+            width: 80%;
+            height: auto;
+            margin: 0% auto;
+            margin-top: 30%;
+            padding-top: 20%;
+        }
+        .Tcon3Box {
+            width: 100%;
+            height: auto;
+        }
+        .Tcon3Box:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .Tcon3Box li.Tcon3BoxLst {
+            display: block;
+            float: left;
+            width: 100%;
+            height: auto;
+            margin: 10% 0%;
+            box-sizing: border-box;
+            padding-bottom: 1%;
+            cursor: pointer;
+            position: relative;
+        }
+        .Tcon3Box li.Tcon3BoxLst a.Tc3Link {
+            display: block;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+        .Tc3BoxTit1 {
+            text-align: center;
+            font-size: 3vmax;
+            color: #fff;
+            font-family: 'Amethysta', serif;
+            font-weight: 100;
+            padding-top: 20%;
+        }
+        .Tc3BoxTit2 {
+            text-align: center;
+            font-size: 1vmax;
+            color: #fff;
+            font-weight: 10;
+            font-family: 'Amethysta', serif;
+        }
+        .Tcon3Box li.Tcon3BoxLst1 {
+            background-image: url("./images/c3Item1Bg1.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .Tcon3Box li.Tcon3BoxLst2 {
+            background-image: url("./images/c3Item1Bg4.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .Tcon3Box li.Tcon3BoxLst3 {
+            background-image: url("./images/c3Item1Bg2.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .Tcon3Box li.Tcon3BoxLst4 {
+            background-image: url("./images/c3Item1Bg3.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+    
+    <!-- Tcon4 -->
+    <style>
+        #Tcon4 {
+            width: 100%;
+            height: auto;
+        }
+        .Tcon4In {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .Tcon4In ul li.Tcon4Item2 {
+            background-color: #d91e3b;
+        }
+        .Tcon4BoxTit {
+            text-align: center;
+            padding: 5%;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 3vmax;
+            font-family: 'Gothic A1', sans-serif;
+            text-shadow: 1px 1px 20px #fff;
+        }
+        .Tcon4BoxTxt {
+            display: block;
+            text-align: center;
+            padding: 1.5%;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 1vmax;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+            text-shadow: 1px 1px 20px #3f3f3f;
+        }
+        .Tcon4More {
+            display: block;
+            text-align: center;
+            color: #3f3f3f;
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 2vmax;
+            font-weight: bold;
+            padding: 2.5% 0%;
+            transition: 0.51s;
+            width: 60%;
+            margin: 10% auto;
+            background-color: #fff;
+        }
+    </style>
+    
+    <!-- Mft -->
+    <style>
+        #Tft {
+            width: 100%;
+            height: auto;
+            clear: both;
+            padding: 2.5% 0%;
+            background-color: #fff;
+        }
+        .TftIn {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .TftLogo {
+            display: inline-block;
+            width: 40%;
+            height: auto; 
+        }
+        .TftLogo img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .TftLeft {
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        .TaddPlus {
+            width: 100%;
+            height: auto;
+            margin: 2.5% 0%;
+        }
+        .TaddPlus:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .TaddPlus li.TftLst {
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        .TaddPlus li.TftLst .Tadd {
+            text-align: left;
+            color: #3f3f3f;
+            font-size: 1vmax;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+            padding: 2.5% 0%;
+        }
+        .TaddPlus li.TftLst .Tcall {
+            display: block;
+            color: #3f3f3f;
+            font-size: 1vmax;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+            padding: 2.5% 0%;
+        }
+        .TaddPlus li.TftLst .Tmail {
+            display: block;
+            color: #3f3f3f;
+            font-size: 1vmax;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+        }
+        .TftSnsBox {
+            width: 50%;
+            height: auto;
+            padding: 2.5% 0%;
+        }
+        .TftSnsBox li {
+            float: left;
+            width: 25%;
+            height: auto;
+            
+        }
+        .TftSnsBox li img {
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+        
+        .TftLst2 {
+            width: 100%;
+            height: auto;
+            clear: both;
+        }
+        .TftLst2 ul {
+            width: 100%;
+            height: auto;
+        }
+        .TftLst2 ul:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .TftLst2 ul li {
+            float: left;
+            width: 50%;
+            height: auto;
+            margin-top: 10%;
+        }
+        .TftLst2 ul li a {
+            display: block;
+            color: #3f3f3f;
+            font-size: 0.9vmax;
+            font-family: 'Gothic A1', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.4s;
+            margin: 5% auto;
+        }
+        .TftLst2 ul li a:hover {
+            color: #c90230;
+        }
+        .TfamTit {
+            display: block;
+            text-align: center;
+            font-size: 1.2vmax;
+            font-weight: bold;
+            font-family: 'Text Me One', sans-serif;
+            color: #3f3f3f;
+            margin-bottom: 7.5%;
+            padding-bottom: 5%;
+            border-bottom: 2px solid #3f3f3f;
+        }
+        .Tcopyright {
+            clear: both;
+            display: block;
+            text-align: center;
+            color: #3f3f3f;
+            font-family: 'Gothic A1', sans-serif;
+            font-weight: bold;
+            padding: 1.5% 0%;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            margin-top: 5%;
+        }
+    </style>
+
+    <!--
+    <style>
         @media screen and (max-width: 767px) {
             /* 모바일 */ 
             #desktop {
@@ -1319,10 +1872,21 @@
             #mobile {
                 display: block;
             }
+            #tablat {
+                display: none;
+            }
         }
         @media screen and (min-width:768px) and (max-width:959px) {
             /* 테블릿 */
-            
+            #desktop {
+                display: none;
+            }
+            #mobile {
+                display: none;
+            }
+            #tablat {
+                display: block;
+            }
         }
         
         @media screen and (min-width:959px) and (max-width:1199px) {
@@ -1331,6 +1895,9 @@
                 display: block;
             }
             #mobile {
+                display: none;
+            }
+            #tablat {
                 display: none;
             }
         }
@@ -1342,8 +1909,16 @@
             #mobile {
                 display: none;
             }
+            #tablat {
+                display: none;
+            }
         }
-    </style> -->
+    </style>
+    -->
+    
+    
+    
+    
     
     <script>
         $(document).ready(function(){
@@ -1411,25 +1986,25 @@
                             <img src="./images/vs1.png" alt="">
                             <span class="vsTit1">미래에는 과연</span>
                             <span class="vsTit2">무엇이 있을까 ?</span>
-                            <h2 class="vsTxt">끊임없이 성장하는 미래<br>미래를 향한 움직임 IFT에서 실천하겠습니다.</h2>
+                            <h2 class="vsTxt">끊임없이 성장하는 미래<br>미래를 향한 움직임 IFT에서 시작합니다.</h2>
                         </li>
                         <li>
                             <img src="./images/vs2.png" alt="">
                             <span class="vsTit1">미래를 향한 움직임</span>
                             <span class="vsTit2">메이커 운동 !</span>
-                            <h2 class="vsTxt">구상하고 개발하는 혁신시대<br>세계적인 제조업 혁신이 연계된 창작운동 IFT가함께합니다.</h2>
+                            <h2 class="vsTxt">구상하고 개발하는 혁신시대<br>세계적인 제조업 혁신이 연계된 창작운동 IFT가 선도합니다.</h2>
                         </li>
                         <li>
                             <img src="./images/vs3.png" alt="">
-                            <span class="vsTit1">참여 기반의 확대</span>
-                            <span class="vsTit2">메이커 창작활동 지원 ?</span>
-                            <h2 class="vsTxt">메이커의 자기주도적 창작활동에<br>필요한 서비스 IFT에서 책임지겠습니다.</h2>
+                            <span class="vsTit1">가장 이상적인 교육을 향해</span>
+                            <span class="vsTit2">왜 학습자 중심의 교육으로 변화하는가?</span>
+                            <h2 class="vsTxt">융복합인재의 양성을 위해서 필요한 교육!<br>IFT는 이러한 교육을 위해서 준비되었고 발전해가고 있습니다.</h2>
                         </li>
                         <li>
                             <img src="./images/vs4.png" alt="">
-                            <span class="vsTit1">성적이 아닌</span>
-                            <span class="vsTit2">미래에 대한 성장</span>
-                            <h2 class="vsTxt">배움의 향상은 성적<br>하지만 성적보단 성장이 중요한 시점 IFT가 시작합니다.</h2>
+                            <span class="vsTit1">교육과 IT기술이 만나</span>
+                            <span class="vsTit2">학습자의 배우는 과정에 어떠한 변화가 오는가?</span>
+                            <h2 class="vsTxt">IT기술은 교육의 질을 높이고 향상시키고<br>가장 효과적인 학습을 찾도록 IFT가 도와드립니다.</h2>
                         </li>
                     </ul>
                 </figure>
@@ -1451,13 +2026,13 @@
                             <li>
                                 <button class="btn3">
                                    <span class="plus">→</span>
-                                    <span class="btnTxt"><strong>창작활동?</strong><br>Creative Activities?</span>
+                                    <span class="btnTxt"><strong>새로운 교육?</strong><br>New education?</span>
                                 </button>
                             </li>
                             <li>
                                 <button class="btn4">
                                    <span class="plus">→</span>
-                                    <span class="btnTxt"><strong>미래 성장?</strong><br>Future growth?</span>
+                                    <span class="btnTxt"><strong>에듀테크 발전성?</strong><br>EduTech potential?</span>
                                 </button>
                             </li>
                         </ul>
@@ -1489,7 +2064,7 @@
                         <li class="con2Item3">
                             <img src="./images/con2Icon3.png" alt=""  class="con2Img5">
                             <h2 class="con2ItemTit">새롭게 형성된 대중문화</h2>
-                            <span class="con2ItemTxt">새로운것과 새롭지 않은것이<br>합쳐져 형성된 사회문화적<br>현상으로, 그범위와 영향력이 제조업<br>전 영역, 전세계적으로 확대</span>
+                            <span class="con2ItemTxt">새로운 것과 새롭지 않은 것이<br>합쳐져 형성된 사회문화적 현상으로,<br>그범위와 영향력이 제조업<br>전 영역, 전세계적으로 확대</span>
                         </li>
                     </ul>
                 </div>
@@ -1548,7 +2123,7 @@
                         <h2 class="c3BoxTit2">Research And Development</h2>
                         <div class="con3IHover3">
                             <h2 class="con3HoverTxt">
-                                4차 산업의 중심<br>IFT 연구와 개발을 위한<br>연구소 설립을 통해<br>앞서가는 기업
+                                4차 산업의 중심<br>IFT의 연구와 개발을 위한<br>연구소 설립을 통해<br>앞서가는 기업
                             </h2>
                             <span class="c3More">
                                 <img src="./images/plus.png" alt="플러스">
@@ -1566,7 +2141,7 @@
                         <h2 class="c3BoxTit2">Shopping Mall</h2>
                         <div class="con3IHover4">
                             <h2 class="con3HoverTxt">
-                                원하는것을 만들고<br>스스로 배울 수 있는<br>발달에 도움을<br>IFT가 함께 합니다.
+                                원하는 것을 만들고<br>스스로 배울 수 있고<br>발달에 도움을 주는<br>교구를 판매합니다.
                             </h2>
                             <span class="c3More">
                                 <img src="./images/plus.png" alt="플러스">
@@ -1672,7 +2247,7 @@
             </footer>
     </div>
     
-    <div class="main" id="mobile" style="none">
+    <div class="main" id="mobile">
         <header id="Mhd">
         <div class="MhdIn">
             <a href="" class="Mlogo">
@@ -1726,15 +2301,27 @@
             <ul>
                 <li>
                     <img src="./images/vs1.png" alt="">
+                    <span class="MvsTit1">미래에는 과연</span>
+                    <span class="MvsTit2">무엇이 있을까 ?</span>
+                    <h2 class="MvsTxt">끊임없이 성장하는 미래<br>미래를 향한 움직임 IFT에서 시작합니다.</h2>
                 </li>
                 <li>
-                    <img src="./images/vs1.png" alt="">
+                    <img src="./images/vs2.png" alt="">
+                    <span class="MvsTit1">미래를 향한 움직임</span>
+                            <span class="MvsTit2">메이커 운동 !</span>
+                            <h2 class="MvsTxt">구상하고 개발하는 혁신시대<br>세계적인 제조업 혁신이 연계된 창작운동 IFT가 선도합니다.</h2>
                 </li>
                 <li>
-                    <img src="./images/vs1.png" alt="">
+                    <img src="./images/vs3.png" alt="">
+                    <span class="MvsTit1">가장 이상적인 교육을 향해</span>
+                            <span class="MvsTit2">왜 학습자 중심의 교육으로 변화하는가?</span>
+                            <h2 class="MvsTxt">융복합인재의 양성을 위해서 필요한 교육!<br>IFT는 이러한 교육을 위해서 준비되었고 발전해가고 있습니다.</h2>
                 </li>
                 <li>
-                    <img src="./images/vs1.png" alt="">
+                    <img src="./images/vs4.png" alt="">
+                    <span class="MvsTit1">교육과 IT기술이 만나</span>
+                            <span class="MvsTit2">학습자의 배우는 과정에 어떠한 변화가 오는가?</span>
+                            <h2 class="MvsTxt">IT기술은 교육의 질을 높이고 향상시키고<br>가장 효과적인 학습을 찾도록 IFT가 도와드립니다.</h2>
                 </li>
             </ul>
         </figure>
@@ -1764,7 +2351,7 @@
                         <li class="Mcon2Item3" style="margin-top: 2.5%;">
                             <img src="./images/con2Icon3.png" alt="">
                             <h2 class="Mcon2ItemTit">새롭게 형성된 대중문화</h2>
-                            <span class="Mcon2ItemTxt">새로운것과 새롭지 않은것이<br>합쳐져 형성된 사회문화적<br>현상으로, 그범위와 영향력이 제조업<br>전 영역, 전세계적으로 확대</span>
+                            <span class="Mcon2ItemTxt">새로운것과 새롭지 않은것이<br>합쳐져 형성된 사회문화적 현상으로,<br>그범위와 영향력이 제조업<br>전 영역, 전세계적으로 확대</span>
                         </li>
                     </ul>
             </div>
@@ -1839,6 +2426,220 @@
                             </li>
                             <li class="MftLst">
                                     <ul class="MftSnsBox">
+                                        <li><a href="" style="z-index: 9999;"><img src="./images/kakao.png" alt="ftSns"></a></li>
+                                        <li><a href="" style="z-index: 9999;"><img src="./images/instagram.png" alt="ftSns"></a></li>
+                                        <li><a href="" style="z-index: 9999;"><img src="./images/facebook.png" alt="ftSns"></a></li>
+                                        <li><a href="" style="z-index: 9999;"><img src="./images/blog.png" alt="ftSns"></a></li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="MftLst2">
+                        <ul>
+                            <li>
+                                <span class="MfamTit">ABOUT US</span>
+                                <a href="">인사말</a>
+                                <a href="">회사소개</a>
+                                <a href="">안내말</a>
+                                <a href="">찾아오시는 길</a>
+                            </li>
+                            <li>
+                                <span class="MfamTit">FAMILLY SITE</span>
+                                <a href="">한국로봇연합회</a>
+                                <a href="">대전 가온누리</a>
+                                <a href="">세종 가온누리</a>
+                                <a href="">유비테크</a>
+                            </li>
+                            <li>
+                                <span class="MfamTit">CUSTOMER SUPPORT</span>
+                                <a href="">1:1 문의</a>
+                                <a href="">상담 예약</a>
+                                <a href="">메일 보내기</a>
+                            </li>
+                            <li>
+                                <span class="MfamTit">SITE REGULATIONS</span>
+                                <a href="">개인정보처리방침</a>
+                                <a href="">홈페이지이용약관</a>
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                        <span class="Mcopyright">Copyright ⓒ IFT All Rights Reserved</span>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="main" id="tablat" style="display: none;">
+        <header id="Thd">
+        <div class="ThdIn">
+            <a href="" class="Tlogo">
+                  <img src="./images/logo_off.png" alt="">
+                </a>
+            <div class="Tmenu">
+                <button class="TmenuBtn">
+                    
+                </button>
+                
+                <ul>
+                    <li class="">
+                        <a href="./intro.html">INTRO</a>
+                        <a href="./intro.html" class="Tclick">></a>
+
+                    </li>
+                    <li class="">
+                        <a href="./makerspace.html">MAKER SPACE</a>
+                        <a href="./makerspace.html" class="Tclick">></a>
+
+                    </li>
+                    <li class="">
+                        <a href="./public.html">PUBLIC EDU</a>
+                        <a href="./public.html" class="Tclick">></a>
+                    </li>
+                    <li class="">
+                        <a href="./rd.html">R &amp; D</a>
+                        <a href="./rd.html" class="Tclick">></a>
+
+                    </li>
+                    <li class="">
+                        <a href="./franchise.html">FRANCHISE</a>
+                        <a href="./franchise.html" class="Tclick">></a>
+  
+                    </li>
+                    <li class="">
+                        <a href="./social.html">SOCIAL CONTRIBUTION</a>
+                        <a href="./social.html" class="Tclick">></a>
+
+                    </li>
+                    <li class="">
+                        <a href="./sopping.html">SHOPPING MALL</a>
+                        <a href="./sopping.html" class="Tclick">></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </header>
+       
+        <figure id="Tvs">
+            <ul>
+                <li>
+                    <img src="./images/vs1.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/vs2.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/vs3.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/vs4.png" alt="">
+                </li>
+            </ul>
+        </figure>
+        
+        <div class="con" id="Tcon2">
+            <div class="Tcon2In">
+                <h2 class="TconTit1">미래를 향한 움직임</h2>
+                <h2 class="TconTit2">MAKER MOVEMENT</h2>
+                
+                <ul>
+                        <li class="Tcon2Item1">
+                            <img src="./images/con2Icon1.png" alt="">
+                            <h2 class="Tcon2ItemTit">계속 해왔던 것</h2>
+                            <span class="Tcon2ItemTxt">인류의 오랜 역사 속에서<br>생활의 필요에 의해<br>이루어 지던 개인 D.I.Y 활동</span>
+                        </li>
+                        <li class="Tcon2ItemPlus">
+                            <img src="./images/con2Plus.png" alt="">
+                        </li>
+                        <li class="Tcon2Item2" style="margin-top: 2.5%;">
+                            <img src="./images/con2Icon2.png" alt="">
+                            <h2 class="Tcon2ItemTit">새로운 것</h2>
+                            <span class="Tcon2ItemTxt">공유문화, 디지털 제작기술,<br>메이커스페이스 등<br>발전된 기술과 환경</span>
+                        </li>
+                        <li class="Tcon2ItemNull">
+                            <img src="./images/con2Null.png" alt="">
+                        </li>
+                        <li class="Tcon2Item3" style="margin-top: 2.5%;">
+                            <img src="./images/con2Icon3.png" alt="">
+                            <h2 class="Tcon2ItemTit">새롭게 형성된 대중문화</h2>
+                            <span class="Tcon2ItemTxt">새로운 것과 새롭지 않은 것이<br>합쳐져 형성된 사회문화적 현상으로,<br>그범위와 영향력이 제조업<br>전 영역, 전세계적으로 확대</span>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="con" id="Tcon3">
+            <div class="Tcon3In">
+               <h2 class="TconTit1">주요사업</h2>
+                <h2 class="TconTit2">C a r r y     F o r w a r d</h2>
+                
+                <ul class="Tcon3Box">
+                <li class="Tcon3BoxLst Tcon3BoxLst1">
+                    <a href="" class="Tc3Link">
+                        <h2 class="Tc3BoxTit1">FUTURE</h2>
+                        <h2 class="Tc3BoxTit2">IFT Maker Space</h2>
+                        
+                    </a>
+                </li>
+                <li class="Tcon3BoxLst Tcon3BoxLst2">
+                    <a href="" class="Tc3Link">
+                        <h2 class="Tc3BoxTit1">B&nbsp;2&nbsp;B</h2>
+                        <h2 class="Tc3BoxTit2">Business to Business</h2>
+                        
+                    </a>
+
+                </li>
+                <li class="Tcon3BoxLst Tcon3BoxLst3">
+                    <a href="" class="Tc2Link">
+                        <h2 class="Tc3BoxTit1">R&nbsp;&amp;&nbsp;D</h2>
+                        <h2 class="Tc3BoxTit2">Research And Development</h2>
+                        
+                    </a>
+                </li>
+                <li class="Tcon3BoxLst Tcon3BoxLst4">
+                    <a href="" class="Tc3Link">
+                        <h2 class="Tc3BoxTit1">S&nbsp;H&nbsp;O&nbsp;P</h2>
+                        <h2 class="Tc3BoxTit2">Shopping Mall</h2>
+                        
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        
+        <div class="con" id="Tcon4">
+            <div class="Tcon4In">
+                    <ul>
+                        <li class="Tcon4Item2">
+                            <h2 class="Tcon4BoxTit">아이디어 제안하기</h2>
+                            <span class="Tcon4BoxTxt">로봇과 코딩에 관련하여 협력 및 제안 등을 받고있습니다.<br>인재 양성을 위한 참신한 아이디어를 기다립니다.</span>
+                            <a href="mailTo:rococup@naver.com" class="Tcon4More">메일 보내기</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        
+        <footer id="Tft">
+            <div class="TftIn">
+                <div class="TftLeft">
+                       <a href="index.html" class="TftLogo">
+                        <img src="./images/logo_on.png" alt="">
+                        </a>
+                            <ul class="TaddPlus">
+                            <li class="TftLst">
+                                <span class="Tadd">대전광역시 유성구 대학로 31 한진오피스텔 1515호</span>
+                            </li>
+                            <li class="TftLst">
+                                <a href="call:070-4185-7272" class="Tcall">전화 : 070-4185-7272</a>
+                            </li>
+                            <li class="TftLst">
+                                <a href="mailTo:rococup@naver.com" class="Tmail">이메일 : ift-edutech@naver.com</a>
+                            </li>
+                            <li class="TftLst">
+                                    <ul class="TftSnsBox">
                                         <li><a href="" style="z-index: 9999;"><img src="./images/kakao.png" alt="ftSns"></a></li>
                                         <li><a href="" style="z-index: 9999;"><img src="./images/instagram.png" alt="ftSns"></a></li>
                                         <li><a href="" style="z-index: 9999;"><img src="./images/facebook.png" alt="ftSns"></a></li>
