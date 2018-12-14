@@ -37,7 +37,7 @@
             height: 100%;
             min-width: 320px;
             max-width:1920px;
-            background-color: #111;
+            background-color: #000;
             font-family: 'Gothic A1', sans-serif;
         }
         ul {
@@ -74,6 +74,7 @@
             text-shadow: 2px 3px 13px #fff;
             position: absolute;
             display: none;
+            z-index: 9999;
         }
         .con1Tit1 {
             font-size: 4vw;
@@ -136,6 +137,18 @@
         }
     </style>
     
+    <style>
+        .video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            opacity: 0;
+        }
+    </style>
+    
     <script>
         $(document).ready(function(){
             $(".con1Tit1").fadeIn(1500, function(){
@@ -168,11 +181,10 @@
             $(".con1Tit10").delay(16000).fadeIn(1500, function(){
                 $(this).fadeOut(1500);
             });
-            $(".con1Tit11").delay(18000).fadeIn(1500);
-
-            
+            $(".video").delay(18000).not(":animated").animate({"opacity": "1"}, 1500);
         });
     </script>
+    
     
 </head>
 <body>
@@ -189,7 +201,7 @@
                 <h2 class="con1Tit8">기술</h2>
                 <h2 class="con1Tit9">로봇</h2>
                 <h2 class="con1Tit10">그리고</h2>
-                <h2 class="con1Tit11">미래</h2>
+                <video src="./images/video/fu.mp4" autoplay class="video"></video>
 
                 
             </div>

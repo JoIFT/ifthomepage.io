@@ -528,7 +528,7 @@
             overflow: hidden;
         }
         #vs ul {
-            width: 400%;    
+            width: 500%;    
             height: auto;
         }
         #vs ul:after {
@@ -538,7 +538,7 @@
         }
         #vs ul li {
             float: left;
-            width: 25%;
+            width: 20%;
             height: auto;
             position: relative;
         }
@@ -632,32 +632,32 @@
         $(document).ready(function(){
             $(".vsBtn ul li a").removeAttr("href");
             $(".vsBtn ul li a.roco").click(function(){
-                $("#vs ul").stop().not(":animated").animate({"margin-left": "0%"}, 800);
-                $(this).stop().addClass("on");
-                $(this).stop().parent().siblings().find("a").removeClass("on");
-                
-                $(".con2Box_Box").stop().not(":animated").animate({"margin-left": "0%"}, 800);
-            });
-            $(".vsBtn ul li a.coding").click(function(){
                 $("#vs ul").stop().not(":animated").animate({"margin-left": "-100%"}, 800);
                 $(this).stop().addClass("on");
                 $(this).stop().parent().siblings().find("a").removeClass("on");
                 
                 $(".con2Box_Box").stop().not(":animated").animate({"margin-left": "-100%"}, 800);
             });
-            $(".vsBtn ul li a.familly").click(function(){
+            $(".vsBtn ul li a.coding").click(function(){
                 $("#vs ul").stop().not(":animated").animate({"margin-left": "-200%"}, 800);
                 $(this).stop().addClass("on");
                 $(this).stop().parent().siblings().find("a").removeClass("on");
                 
                 $(".con2Box_Box").stop().not(":animated").animate({"margin-left": "-200%"}, 800);
             });
-            $(".vsBtn ul li a.inve").click(function(){
+            $(".vsBtn ul li a.familly").click(function(){
                 $("#vs ul").stop().not(":animated").animate({"margin-left": "-300%"}, 800);
                 $(this).stop().addClass("on");
                 $(this).stop().parent().siblings().find("a").removeClass("on");
                 
                 $(".con2Box_Box").stop().not(":animated").animate({"margin-left": "-300%"}, 800);
+            });
+            $(".vsBtn ul li a.inve").click(function(){
+                $("#vs ul").stop().not(":animated").animate({"margin-left": "-400%"}, 800);
+                $(this).stop().addClass("on");
+                $(this).stop().parent().siblings().find("a").removeClass("on");
+                
+                $(".con2Box_Box").stop().not(":animated").animate({"margin-left": "-400%"}, 800);
             });
             
         });
@@ -684,12 +684,12 @@
             clear: both;
         }
         .con2Box_Box {
-            width: 400%;
+            width: 500%;
             height: auto;
         }
         .con2Box_Box li.con2BoxLst {
             float: left;
-            width: 25%;
+            width: 20%;
             height: auto;
         }
         .con2Box1_Box {
@@ -1501,6 +1501,42 @@
       </script>
       
       
+      <style>
+          .soTit {
+              color: #3f3f3f;
+              font-size: 1.52vmax;
+              font-weight: bold;
+              font-family: 'Gothic A1', sans-serif;
+              text-align: center;
+              width: 100%;
+              height: auto;
+              background-color: #fff;
+              padding: 5%;
+              box-sizing: border-box;
+              margin-top: 2.5%;
+              line-height: 3vw;
+              
+          }
+          .soTit strong {
+              font-size: 4vmax;
+              font-weight: bold;
+              color: #585893;
+              box-sizing: border-box;
+              line-height: 8vw;
+          }
+    </style>
+    
+    <script type="text/javascript">
+            $(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 200) {
+                    $("#hd").addClass("scrolling");
+                } else {
+                    $("#hd").removeClass("scrolling");
+                }
+            });
+        </script>
 </head>
 <body onload="initialize()">
    <div id="particles"></div>
@@ -1545,7 +1581,7 @@
 
                     </li>
                     <li class="menuLst">
-                        <a href="./shopping.html">SHOPPING MALL</a>
+                        <a href="./edulist.html">교육 기자재 납품</a>
                     </li>
                 </ul>
            </div>
@@ -1555,6 +1591,11 @@
           
           <figure id="vs">
                    <ul>
+                      <li>
+                          <img src="./images/social/vs0.png" alt="">
+                          <h2 class="vsTit1">IFT 사회공헌 소개</h2>
+                          <span class="vsTxt2">IFT는 무한하고 가능성을 향해 다가가는 미래 산업을 위해<br>다양한 방법으로 대회를 후원하고 있습니다.</span>
+                      </li>
                        <li>
                            <img src="./images/social/vs1.png" alt="">
                            <h2 class="vsTit1">로봇코딩컵</h2>
@@ -1584,7 +1625,7 @@
                <div class="vsBtn">
                    <ul>
                        <li>
-                           <a href="" class="roco on">로봇코딩컵</a>
+                           <a href="" class="roco">로봇코딩컵</a>
                        </li>
                        <li>
                            <a href="" class="coding">코딩올림피아드</a>
@@ -1606,7 +1647,13 @@
            <div class="con2In">
                <div class="con2Box">
                    <ul class="con2Box_Box">
-                      
+                      <li class="con2BoxLst">
+                         <img src="./images/social/soLogo.png" alt="" class="logo" style="width: 40%; margin-top: 20%;">
+                          <h2 class="soTit">무한한 가능성을 가진 자녀들이 꿈과 희망을 품고 미래를 향해 전진하여 나아갈 수 있도록<br>다양한 방법으로 대회를 후원하고 있습니다.</h2>
+                          <h2 class="con2Box1_Tit" style="padding-top: 5%; font-size: 2.5vmax;">또한</h2>
+                          <h2 class="soTit">향후 장학재단을 설립하여<br><strong>글로벌 인재를 양성하기 위한</strong><br>원대한 포부를 가지고 있습니다.</h2>
+                          <h2 class="soTit">이 일에 함께 협력하며 밝은 미래를 비추길 원합니다.</h2>
+                      </li>
                        <li class="con2BoxLst ro">
                            <ul class="con2Box1_Box">
                                <li class="con2Box1_BoxLst">

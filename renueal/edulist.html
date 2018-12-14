@@ -39,6 +39,7 @@
             z-index: -1;
         }
     </style>
+    
     <style>
         * {
             margin: 0;
@@ -72,172 +73,6 @@
     <script type='text/javascript' src='./js/jquery.particleground.js'></script>
     <!-- 헤더 -->
     <link rel="stylesheet" href="./css/header.css">
-    
-    
-    <!-- 비쥬얼배너 -->
-    <style>
-        #con1 {
-            width: 100%;
-            height: auto;
-            position: relative;
-        }
-        #vs {
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-        }
-        #vs ul {
-            width: 400%;
-            height: auto;
-        }
-        #vs ul li {
-            float: left;
-            width: 25%;
-            height: auto;
-            position: relative;
-        }
-        #vs ul li img {
-            display: block;
-            width: 100%;
-            height: auto;
-            opacity: 0.5;
-        }
-        .vsTit1 {
-            font-size: 3vmax;
-            font-weight: 200;
-            color: #fff;
-            position: absolute;
-            top: 35%;
-            left: 10%;
-            font-family: 'Do Hyeon', sans-serif;
-            display: block;
-            opacity: 0;
-        }
-        .vsTit2 {
-            display: block;
-            font-size: 5vmax;
-            font-weight: bold;
-            color: #fff;
-            position: absolute;
-            top: 42%;
-            left: 10%;
-            opacity: 0;
-        }
-        .vsTxt {
-            position: absolute;
-            font-size: 0.7vmax;
-            font-weight: bold;
-            color: #fff;
-            position: absolute;
-            top: 57.5%;
-            left: 10%;
-            font-family: 'Gothic A1', sans-serif;
-            letter-spacing: 0.4vw;
-            text-shadow: 1px 1px 15px #fff;
-            opacity: 0;
-        }
-        .btnBox {
-            width: 40%;
-            height: auto;
-            position: absolute;
-            top: 65%;
-            left: 10%;
-        }
-        .btnBox ul {
-            width: 100%;
-            height: auto;
-        }
-        .btnBox ul li {
-            float: left;
-            width: 25%;
-            height: auto;
-        }
-        .btnBox ul li button {
-            width: 9vw;
-            height: 9vw;
-            cursor: pointer;
-            border: 1px solid #fff;
-            background: none;
-            display: none;
-        }
-        .btnBox ul li button.on {
-            background: #fff;   
-        }
-        .plus {
-            display: block;
-            font-size: 2vmax;
-            font-weight: bold;
-            color: #fff;
-        }
-        .plus.on {
-            color: #3f3f3f;
-        }
-        .btnTxt {
-            display: block;
-            color: #fff;
-            text-align: left;
-            padding: 15%;
-            box-sizing: border-box;
-            font-size: 0.8vmax;
-            font-family: 'Gothic A1', sans-serif;
-        }
-        .btnTxt.on {
-            color: #3f3f3f;
-        }
-        .btnTxt strong {
-            text-shadow: 1px 1px 20px #fff;
-            line-height: 2vw;
-        }
-    </style>
-    
-    <!-- vs script -->
-    <script>
-        $(document).ready(function(){
-            $(".vsTit1").stop().delay(100).not(":animated").animate({"opacity": "1"}, 800);
-            $(".vsTit2").stop().delay(800).not(":animated").animate({"opacity": "1"}, 800);
-            $(".vsTxt").stop().delay(1500).not(":animated").animate({"opacity": "1"}, 800);
-            $(".btn1").delay(2000).slideDown(500);
-            $(".btn2").delay(2200).slideDown(500);
-            $(".btn3").delay(2400).slideDown(500);
-            $(".btn4").delay(2600).slideDown(500);
-            
-            $(".btnBox ul li button").click(function(){
-                $(this).addClass("on");
-                $(this).find("span").addClass("on");
-                $(this).parent().siblings().find("button").removeClass("on");
-                $(this).parent().siblings().find("button span").removeClass("on");
-            });
-            
-            $(".btn1").click(function(){
-                $(".vsTit1, .vsTit2, .vsTxt").stop().css("opacity", "0");
-                $("#vs ul").stop().not(":animated").animate({"margin-left": "-0%"}, 500);
-                $(".vsTit1").stop().delay(300).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTit2").stop().delay(1000).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTxt").stop().delay(1700).not(":animated").animate({"opacity": "1"}, 800);
-            });
-            $(".btn2").click(function(){
-                $(".vsTit1, .vsTit2, .vsTxt").stop().css("opacity", "0");
-                $("#vs ul").stop().not(":animated").animate({"margin-left": "-100%"}, 500);
-                $(".vsTit1").stop().delay(300).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTit2").stop().delay(1000).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTxt").stop().delay(1700).not(":animated").animate({"opacity": "1"}, 800);
-            });
-            $(".btn3").click(function(){
-                $(".vsTit1, .vsTit2, .vsTxt").stop().css("opacity", "0");
-                $("#vs ul").stop().not(":animated").animate({"margin-left": "-200%"}, 500);
-                $(".vsTit1").stop().delay(300).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTit2").stop().delay(1000).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTxt").stop().delay(1700).not(":animated").animate({"opacity": "1"}, 800);
-            });
-            $(".btn4").click(function(){
-                $(".vsTit1, .vsTit2, .vsTxt").stop().css("opacity", "0");
-                $("#vs ul").stop().not(":animated").animate({"margin-left": "-300%"}, 500);
-                $(".vsTit1").stop().delay(300).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTit2").stop().delay(1000).not(":animated").animate({"opacity": "1"}, 800);
-                $(".vsTxt").stop().delay(1700).not(":animated").animate({"opacity": "1"}, 800);
-            });
-        });
-    </script>
     
     <!-- footer -->
     <style>
@@ -646,7 +481,7 @@
         }
     </style>
 
-    
+    <!--
     <style>
         @media screen and (max-width: 767px) {
             /* 모바일 */ 
@@ -681,71 +516,101 @@
             }
         }
     </style>
+    -->
     
-    
-    <script src="./clock.js"></script>
     <style>
-        .popBox {
+        #con1 {
             width: 100%;
-            height: 100%;
+            height: auto;
+        }
+        .con1Box {
+            width: 100%;
+            height: auto;
             position: relative;
         }
-        .popIn {
-            width: 50%;
-            height:50%;
-            margin: 12.5% auto;
-        }
-        .popTit {
+        .con1BoxTit1 {
             text-align: center;
-            color: #ffffff;
-            font-size: 5vmax;
-            margin-top: 20%;
-        }
-        .clocks {
-            opacity: 0.2;
-            /* transform:translate(30%, 10%); */
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 0;
-            left: 36.5%;
-            overflow: hidden;
-        }
-        .popTit2 {
-            font-size: 1vmax;
-            font-weight: 100;
-            text-align: center;
+            font-size: 4vmax;
             color: #fff;
+            font-family: 'Gothic A1', sans-serif;
+            text-shadow: 1px 1px 20px #fff;
+            position: absolute;
+            top: 45%;
+            width: 100%;
+        }
+        .con1BoxTit2 {
+            text-align: center;
+            font-size: 1.2vmax;
+            color: #fff;
+            font-family: 'Gothic A1', sans-serif;
+            padding: 2%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 60%;
+            width: 100%;
+        }
+        .con1In {
+            width: 80%;
+            height: auto;
             margin: 0 auto;
+        }
+        .con1In ul {
+            width: 100%;
+            height: auto;
+        }
+        .con1In ul li {
+            width: 100%;
+            height: auto;
+            float: left;
+            margin-bottom: 5%;
             padding-bottom: 5%;
-            margin-top: 50%;
+            border-bottom: 1px solid #fff;
         }
-        #canvas {
-            margin: 0 auto;
+        .con1In ul li img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
-        .popTxt {
+        .lstBox {
+            display: inline-block;
+            width: 5%;
+            padding: 2.5% 0%;
+            background-color: #e5564e;
             text-align: center;
             color: #fff;
             font-weight: bold;
-            font-size: 1vmax;
+            font-size: 2vw;
+            margin-top: 2.5%;
+            float: left;
         }
-        .popTell {
-            font-size: 3vmax;
+        .con1Tit1 {
+            color: #fff;
+            font-size: 2vmax;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+            margin-top: 2.5%;
+            padding-left: 8%;
+        }
+        .con1Tit2 {
+            color: #fff;
+            font-size: 1vmax;
+            font-family: 'Gothic A1', sans-serif;
+            padding-left: 8%;
+            margin-top: 0.5%;
+            
+        }
+        .con1Txt {
+            display: block;
+            color: #fff;
+            font-weight: bold;
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 1.5vmax;
+            margin-top: 1%;
+            padding-left: 8%;
         }
     </style>
     
-    
-    <script>
-        $(document).ready(function(){
-            $(".serviceTxt").removeAttr("href");
-            
-        });
-    </script>
-    <script language="javascript">
-        function showPopup() { window.open("./serviceTxt.html", "a", "width=800, height=700, left=100, top=50"); }
-      </script>
-      
-      <script type="text/javascript">
+    <script type="text/javascript">
             $(window).scroll(function() {    
                 var scroll = $(window).scrollTop();
 
@@ -756,8 +621,6 @@
                 }
             });
         </script>
-    
-    
     
 </head>
 <body onload="initialize()">
@@ -802,26 +665,54 @@
 
                     </li>
                     <li class="menuLst">
-                        <a href="./shopping.html" style="background-color: #fff;
-            color: #3f3f3f;">SHOPPING MALL</a>
+                        <a href="./edulist.html" style="background-color: #fff;
+            color: #3f3f3f;">교육 기자재 납품</a>
                     </li>
                 </ul>
            </div>
        </header>
             
-        <div class="popBox">
-                <div class="popIn">
-                   <h2 class="popTit2">O&nbsp;&nbsp;U&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;E&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;S</h2>
-                    <h2 class="popTit">COMING SOON</h2>
-                    <h2 class="popTxt">쇼핑몰 준비중입니다.<br>자세한 사항은 IFT에 연락주시기 바랍니다.<br><br><br><strong class="popTell">070.4185.7272</strong></h2>
-                    <div class="clocks">
-                        <canvas id="canvas" width="500" height="500"></canvas>
-                    </div>
-                    
-                    
-                </div>
+        <div class="con" id="con1">
+           <div class="con1Box">
+                 <img src="./images/edu/titImg.png" alt="">
+                 <h2 class="con1BoxTit1">교육 기자재</h2>  
+                 <h2 class="con1BoxTit2">IFT는 조달청에 등록이 되어 있는 업체로<br>학교 및 교육기관에서 필요로 하는 교육 기자재를 납품하고 있습니다.</h2>  
             </div>
+            <div class="con1In">
+                <ul>
+                    <li>
+                        <img src="./images/edu/lst1.png" alt="">
+                        <span class="lstBox">1.</span>
+                        <h2 class="con1Tit1">교육 트렌드를 제시하고 콘텐츠 컨설팅</h2>
+                        <h2 class="con1Tit2">Present educational trends and content consulting</h2>
+                        <span class="con1Txt">독자적인 교육 트렌드를 제시하고, 콘텐츠 컨설팅을 통해 교육에 대한 방향성을 제시 합니다.</span>
+                    </li>
+                    <li>
+                        <img src="./images/edu/lst2.png" alt="">
+                        <span class="lstBox">2.</span>
+                        <h2 class="con1Tit1">교육에 맞는 기자재 납품</h2>
+                        <h2 class="con1Tit2">Present educational trends and content Delivery of equipment suitable for education</h2>
+                        <span class="con1Txt">학교 및 교육기관에서 필요로 하는 교육 기자재를 납품 하고 있습니다.</span>
+                    </li>
+                    <li>
+                        <img src="./images/edu/lst3.png" alt="">
+                        <span class="lstBox">3.</span>
+                        <h2 class="con1Tit1">공교육 및 교육기관 등의 교사 연수</h2>
+                        <h2 class="con1Tit2">Teacher training in public education and educational institutions</h2>
+                        <span class="con1Txt">교사 연수를 통하여, 공교육 및 교육기관의 교육 실시에 대한 전반적인 연수를 실시 합니다.</span>
+                    </li>
+                    <li>
+                        <img src="./images/edu/lst4.png" alt="">
+                        <span class="lstBox">4.</span>
+                        <h2 class="con1Tit1">나라장터의 모든 상품 납품 가능</h2>
+                        <h2 class="con1Tit2">Delivery of all items in the country market</h2>
+                        <span class="con1Txt">IFT는 조달청에 등록이 되어 있어, 나라장터의 모든 상품 납품이 가능 합니다.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
             
+                    
         <footer id="ft">
                 <div class="ftIn">
                     
@@ -837,7 +728,7 @@
                                 <a href="call:070-4185-7272" class="call">전화 : 070-4185-7272</a>
                             </li>
                             <li class="ftLst">
-                                <a href="mailTo:rococup@naver.com" class="mail">이메일 : ift-edutech@naver.com</a>
+                                <a href="mailTo:rococup@naver.com" class="mail">이메일 : rococup@naver.com</a>
                             </li>
                             <li class="ftLst">
                                     <ul class="ftSnsBox">
@@ -874,8 +765,8 @@
                             </li>
                             <li>
                                 <span class="famTit">SITE REGULATIONS</span>
-                                <a href="" style="display: none;">개인정보처리방침</a>
-                                <a href="" style="cursor: pointer;" onclick="showPopup();" class="serviceTxt">홈페이지이용약관</a>
+                                <a href="">개인정보처리방침</a>
+                                <a href="">홈페이지이용약관</a>
                                 <a href=""></a>
                                 <a href=""></a>
                                 <a href=""></a>
@@ -937,7 +828,6 @@
             </div>
         </div>
      </header>
-       
         
         <footer id="Mft">
             <div class="MftIn">

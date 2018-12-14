@@ -1650,6 +1650,20 @@
     <script language="javascript">
         function showPopup() { window.open("./serviceTxt.html", "a", "width=800, height=700, left=100, top=50"); }
       </script>
+      
+      <script type="text/javascript">
+            $(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 200) {
+                    $("#hd").addClass("scrolling");
+                } else {
+                    $("#hd").removeClass("scrolling");
+                }
+            });
+        </script>
+        
+        
 </head>
 <body onload="initialize()">
    <div id="particles"></div>
@@ -1694,7 +1708,7 @@
 
                     </li>
                     <li class="menuLst">
-                        <a href="./shopping.html">SHOPPING MALL</a>
+                        <a href="./edulist.html">교육 기자재 납품</a>
                     </li>
                 </ul>
            </div>

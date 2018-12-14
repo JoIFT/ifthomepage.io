@@ -1127,7 +1127,7 @@
         .con3Txt {
             display: block;
             margin-left: 5%;
-            color: #747487;
+            color: #fff;
             font-weight: 100;
             font-size: 0.8vmax;
         }
@@ -1743,6 +1743,18 @@
             font-size: 1.4vmax;
         }
     </style>
+    
+    <script type="text/javascript">
+            $(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 200) {
+                    $("#hd").addClass("scrolling");
+                } else {
+                    $("#hd").removeClass("scrolling");
+                }
+            });
+        </script>
 </head>
 <body onload="initialize()">
    <div id="particles"></div>
@@ -1787,7 +1799,7 @@
 
                     </li>
                     <li class="menuLst">
-                        <a href="./shopping.html">SHOPPING MALL</a>
+                        <a href="./edulist.html">교육 기자재 납품</a>
                     </li>
                 </ul>
            </div>
