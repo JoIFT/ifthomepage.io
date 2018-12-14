@@ -5,7 +5,7 @@
             height: auto;
             z-index: 9999;
             position: fixed;
-            top: 2.5%;
+            top: 0%;
             left: 0;
         }
         .hdIn {
@@ -17,7 +17,7 @@
         }
         .snsBox {
             position: absolute;
-            top: 0;
+            top: 3%;
             left: 0;
             width: 15%;
             height: auto;
@@ -42,7 +42,7 @@
             width: 13.5%;
             height: auto;
             margin: 0% auto;
-            padding: 1% 0%;
+            padding: 2% 0%;
         }
         .logo img {
             display: block;
@@ -78,4 +78,7 @@
         .menu .menuLst a:hover {
             background-color: #fff;
             color: #3f3f3f;
+        }
+        #hd.scrolling {
+            background: #333;
         }
