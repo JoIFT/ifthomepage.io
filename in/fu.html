@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            border: 0;
+        }
+        ul {
+            list-style: none;
+        }
+    </style>
+    
+    <style>
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+        .con {
+            width: 100%;
+            height: 100%;
+        }
+        #con1 {
+            width: 100%;
+            height: 100%;
+        }
+        .con1In {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .con1Tit1 {
+            
+            background: linear-gradient(#063053, #395873, #5c7c99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 4vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .con1Tit2 {
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 4vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .con1Tit3 {
+            background: linear-gradient(#063053, #395873, #5c7c99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 5vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .con1Tit4 {
+            background: linear-gradient(#063053, #395873, #5c7c99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 6vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .con1Tit5 {
+            background: linear-gradient(#063053, #395873, #5c7c99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 4vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        
+        .con1Tit6 {
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 7vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .con1Tit7 {
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 8.5vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 25%;
+            display: none;
+        }
+        .con1Tit8 {
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 7vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .con1Tit9 {
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+            font-size: 7vmax;
+            font-weight: bold;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 40%;
+            display: none;
+        }
+        .Box_ {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 80%;
+            display: none;
+        }
+        .gif {
+            display: block;
+            width: 5%;
+            height: auto;
+            position: absolute;
+            top: -500%;
+            left: 0%;
+            z-index: -1;
+        }
+        .lineBox {
+            width: 100%;
+            height: 1vw;
+            background-color: #3f3f3f;
+            position: relative;
+            z-index: 9993;
+        }
+        .line {
+            display: block;
+            width: 0%;
+            height: 100%;
+            background-color: #c01654;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9993;
+        }
+        .Cline {
+            display: block;
+            position: absolute;
+            width: 30%;
+            height: 1vw;
+            top: 0;
+            right: 0;
+            background-color: #3f3f3f;
+            transition: 1.2s;
+            transform-origin: bottom right;
+        }
+        .Cline.on {
+            transform-origin: bottom right;
+            transform: rotate(-80deg);
+        }
+        .Cline.on2 {
+            transform-origin: bottom right;
+            transform: rotate(0deg);
+            transition: 6.2s;
+        }
+        .video {
+            display: none;
+            width: 35%;
+            height: auto;
+            position: absolute;
+            left: 60%;
+            top: 70%;
+            z-index: 9933;
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".con1Tit1").fadeIn(1200, function(){
+                $(this).fadeOut(1500, function(){
+                    $(".con1Tit2").fadeIn(1200, function(){
+                        $(this).delay(500).fadeOut(1500);
+                        $(".Box_").fadeIn(1200, function(){
+                            $(".con1Tit3").delay(2500).fadeIn(2800, function(){
+                                $(this).fadeOut(1200, function(){
+                                    $(".con1Tit4").fadeIn(2000, function(){
+                                        $(this).fadeOut(2000, function(){
+                                            $(".con1Tit5").fadeIn(1200, function(){
+                                                $(this).fadeOut(2000, function(){
+                                                    $(".con1Tit6").delay(1500).fadeIn(2000, function(){
+                                                        $(this).fadeOut(1800, function(){
+                                                            $(".con1Tit7").delay(1500).fadeIn(2000, function(){
+                                                                $(this).fadeOut(1000);
+                                                                    $(".circle").fadeIn(1200, function(){
+                                                                        $(".Cline").removeClass("on");
+                                                                        $(".Cline").addClass("on2");
+                                                                        $(".gif").delay(6000).fadeIn(500, function(){
+                                                                            $(this).not(":animated").animate({"left": "100%"}, 4300);
+                                                                        });
+                                                                        $(".line").delay(6200).not(":animated").animate({"width": "100%"}, 4300);
+                                                                        $(".logo").delay(3000).not(":animated").animate({"opacity": "0.3"}, 800, function(){
+                $(".logo").not(":animated").animate({"opacity": "0.0"}, 1200, function(){
+                    $(".logo").delay(500).not(":animated").animate({"opacity": "0.4"}, 800, function(){
+                        $(".logo").not(":animated").animate({"opacity": "0.0"}, 800, function(){
+                            $(".circle").fadeOut(1200, function(){
+                                $(".con1Tit8").fadeIn(800, function(){
+                                    $(this).fadeOut(800, function(){
+                                        $(".con1Tit9").fadeIn(1200, function(){
+                                            $(this).fadeOut(800, function(){
+                                                $(".logo").not(":animated").animate({"opacity": "1"}, 1200, function(){
+                                                    $(this).animate({"left": "15%"}, 800);
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+                                                                    });
+
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+            $(".gif").delay(4000).not(":animated").animate({"left": "65%"}, 12000);
+            $(".line").delay(4000).not(":animated").animate({"width": "70%"}, 12000, function(){
+                $(".lineBox").css("background", "#fff");
+                $(".video").fadeIn(100, function(){
+                    $(this).fadeOut(700);
+                });
+                $(".Cline").addClass("on");
+                $(".gif").delay(1000).fadeOut(1200);
+                
+                
+            });
+        });
+    </script>
+    
+    <style>
+        .circle {
+          position: relative;
+          width: 180px;
+          height: 180px;
+          padding: 0;
+          border-radius: 50%;
+          list-style: none;
+          position: absolute;
+          display: block;
+          width: 160px;
+          height: 160px;
+          border-radius: 10000px;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+            display: none;
+        }
+        .circle > * {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          margin: -10px;
+        }
+        .circle > *:nth-of-type(1) {
+          -webkit-transform: rotate(0deg) translate(90px) rotate(0deg);
+                  transform: rotate(0deg) translate(90px) rotate(0deg);
+        }
+        .circle > *:nth-of-type(2) {
+          -webkit-transform: rotate(18deg) translate(90px) rotate(-18deg);
+                  transform: rotate(18deg) translate(90px) rotate(-18deg);
+        }
+        .circle > *:nth-of-type(3) {
+          -webkit-transform: rotate(36deg) translate(90px) rotate(-36deg);
+                  transform: rotate(36deg) translate(90px) rotate(-36deg);
+        }
+        .circle > *:nth-of-type(4) {
+          -webkit-transform: rotate(54deg) translate(90px) rotate(-54deg);
+                  transform: rotate(54deg) translate(90px) rotate(-54deg);
+        }
+        .circle > *:nth-of-type(5) {
+          -webkit-transform: rotate(72deg) translate(90px) rotate(-72deg);
+                  transform: rotate(72deg) translate(90px) rotate(-72deg);
+        }
+        .circle > *:nth-of-type(6) {
+          -webkit-transform: rotate(90deg) translate(90px) rotate(-90deg);
+                  transform: rotate(90deg) translate(90px) rotate(-90deg);
+        }
+        .circle > *:nth-of-type(7) {
+          -webkit-transform: rotate(108deg) translate(90px) rotate(-108deg);
+                  transform: rotate(108deg) translate(90px) rotate(-108deg);
+        }
+        .circle > *:nth-of-type(8) {
+          -webkit-transform: rotate(126deg) translate(90px) rotate(-126deg);
+                  transform: rotate(126deg) translate(90px) rotate(-126deg);
+        }
+        .circle > *:nth-of-type(9) {
+          -webkit-transform: rotate(144deg) translate(90px) rotate(-144deg);
+                  transform: rotate(144deg) translate(90px) rotate(-144deg);
+        }
+        .circle > *:nth-of-type(10) {
+          -webkit-transform: rotate(162deg) translate(90px) rotate(-162deg);
+                  transform: rotate(162deg) translate(90px) rotate(-162deg);
+        }
+        .circle > *:nth-of-type(11) {
+          -webkit-transform: rotate(180deg) translate(90px) rotate(-180deg);
+                  transform: rotate(180deg) translate(90px) rotate(-180deg);
+        }
+        .circle > *:nth-of-type(12) {
+          -webkit-transform: rotate(198deg) translate(90px) rotate(-198deg);
+                  transform: rotate(198deg) translate(90px) rotate(-198deg);
+        }
+        .circle > *:nth-of-type(13) {
+          -webkit-transform: rotate(216deg) translate(90px) rotate(-216deg);
+                  transform: rotate(216deg) translate(90px) rotate(-216deg);
+        }
+        .circle > *:nth-of-type(14) {
+          -webkit-transform: rotate(234deg) translate(90px) rotate(-234deg);
+                  transform: rotate(234deg) translate(90px) rotate(-234deg);
+        }
+        .circle > *:nth-of-type(15) {
+          -webkit-transform: rotate(252deg) translate(90px) rotate(-252deg);
+                  transform: rotate(252deg) translate(90px) rotate(-252deg);
+        }
+        .circle > *:nth-of-type(16) {
+          -webkit-transform: rotate(270deg) translate(90px) rotate(-270deg);
+                  transform: rotate(270deg) translate(90px) rotate(-270deg);
+        }
+        .circle > *:nth-of-type(17) {
+          -webkit-transform: rotate(288deg) translate(90px) rotate(-288deg);
+                  transform: rotate(288deg) translate(90px) rotate(-288deg);
+        }
+        .circle > *:nth-of-type(18) {
+          -webkit-transform: rotate(306deg) translate(90px) rotate(-306deg);
+                  transform: rotate(306deg) translate(90px) rotate(-306deg);
+        }
+        .circle > *:nth-of-type(19) {
+          -webkit-transform: rotate(324deg) translate(90px) rotate(-324deg);
+                  transform: rotate(324deg) translate(90px) rotate(-324deg);
+        }
+        .circle > *:nth-of-type(20) {
+          -webkit-transform: rotate(342deg) translate(90px) rotate(-342deg);
+                  transform: rotate(342deg) translate(90px) rotate(-342deg);
+        }
+
+        ul.circle li:nth-child(1) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.1s infinite;
+                  animation: dotAnim 1s ease-in-out 0.1s infinite;
+        }
+
+        ul.circle li:nth-child(2) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.2s infinite;
+                  animation: dotAnim 1s ease-in-out 0.2s infinite;
+        }
+
+        ul.circle li:nth-child(3) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.3s infinite;
+                  animation: dotAnim 1s ease-in-out 0.3s infinite;
+        }
+
+        ul.circle li:nth-child(4) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.4s infinite;
+                  animation: dotAnim 1s ease-in-out 0.4s infinite;
+        }
+
+        ul.circle li:nth-child(5) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.5s infinite;
+                  animation: dotAnim 1s ease-in-out 0.5s infinite;
+        }
+
+        ul.circle li:nth-child(6) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.6s infinite;
+                  animation: dotAnim 1s ease-in-out 0.6s infinite;
+        }
+
+        ul.circle li:nth-child(7) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.7s infinite;
+                  animation: dotAnim 1s ease-in-out 0.7s infinite;
+        }
+
+        ul.circle li:nth-child(8) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.8s infinite;
+                  animation: dotAnim 1s ease-in-out 0.8s infinite;
+        }
+
+        ul.circle li:nth-child(9) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 0.9s infinite;
+                  animation: dotAnim 1s ease-in-out 0.9s infinite;
+        }
+
+        ul.circle li:nth-child(10) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1s infinite;
+                  animation: dotAnim 1s ease-in-out 1s infinite;
+        }
+
+        ul.circle li:nth-child(11) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.1s infinite;
+                  animation: dotAnim 1s ease-in-out 1.1s infinite;
+        }
+
+        ul.circle li:nth-child(12) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.2s infinite;
+                  animation: dotAnim 1s ease-in-out 1.2s infinite;
+        }
+
+        ul.circle li:nth-child(13) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.3s infinite;
+                  animation: dotAnim 1s ease-in-out 1.3s infinite;
+        }
+
+        ul.circle li:nth-child(14) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.4s infinite;
+                  animation: dotAnim 1s ease-in-out 1.4s infinite;
+        }
+
+        ul.circle li:nth-child(15) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.5s infinite;
+                  animation: dotAnim 1s ease-in-out 1.5s infinite;
+        }
+
+        ul.circle li:nth-child(16) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.6s infinite;
+                  animation: dotAnim 1s ease-in-out 1.6s infinite;
+        }
+
+        ul.circle li:nth-child(17) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.7s infinite;
+                  animation: dotAnim 1s ease-in-out 1.7s infinite;
+        }
+
+        ul.circle li:nth-child(18) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.8s infinite;
+                  animation: dotAnim 1s ease-in-out 1.8s infinite;
+        }
+
+        ul.circle li:nth-child(19) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 1.9s infinite;
+                  animation: dotAnim 1s ease-in-out 1.9s infinite;
+        }
+
+        ul.circle li:nth-child(20) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 2s infinite;
+                  animation: dotAnim 1s ease-in-out 2s infinite;
+        }
+
+        ul.circle li:nth-child(21) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 1000px;
+          list-style: none;
+          -webkit-animation: dotAnim 1s ease-in-out 2.1s infinite;
+                  animation: dotAnim 1s ease-in-out 2.1s infinite;
+        }
+
+        @-webkit-keyframes dotAnim {
+          0% {
+            background: #cb1b68;
+          }
+          50% {
+            background: #0091EA;
+            -webkit-transform: scale(0.2);
+                    transform: scale(0.2);
+          }
+          100% {
+            background: #FF9800;
+          }
+        }
+
+        @keyframes dotAnim {
+          0% {
+            background: #cb1b68;
+          }
+          50% {
+            background: #0091EA;
+            -webkit-transform: scale(0.2);
+                    transform: scale(0.2);
+          }
+          100% {
+            background: #cb1b68;
+          }
+        }
+
+    </style>
+    
+    <style>
+        .logo {
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: auto;
+            top: 32%;
+            left: 25%;
+            opacity: 0;
+            z-index: 9999;
+        }
+        .skip {
+            display: block;
+            background: none;
+            border: 0;
+            width: 10%;
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            cursor: pointer;
+        }
+        .skip img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+       <button class="skip"><img src="./skip.png" alt=""></button>
+        <div class="con" id="con1">
+            <img src="fib.gif" class="video">
+            <div class="con1In">
+                <h2 class="con1Tit1">우리는 항상 교육 받으며</h2>
+                <h2 class="con1Tit2">미래를 향해 출발 합니다.</h2>
+                <h2 class="con1Tit3">그런데..</h2>
+                <h2 class="con1Tit4">교육의 길이 끊어진다면 ....</h2>
+                <h2 class="con1Tit5">더 이상 향할 수 없습니다.</h2>
+                <h2 class="con1Tit6">끊어진 그 길</h2>
+                <h2 class="con1Tit7">저희가<br>이어 드리겠습니다.</h2>
+                <h2 class="con1Tit8">미래를 향한 움직임</h2>
+                <h2 class="con1Tit9">IFT에서 시작합니다.</h2>
+                <div class="Box_">
+                    <div class="lineBox">
+                       <img src="xe.gif" alt="" class="gif">
+                        <span class="line"></span>
+                        <span class="Cline"></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <ul class="circle">
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+              <li class="point"></li>
+            </ul>
+    
+    <img src="logo.png" alt="" class="logo">
+        </div>
+        
+        
+    </div>
+    
+    
+</body>
+</html>
